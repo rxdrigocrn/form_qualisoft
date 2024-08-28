@@ -3,13 +3,31 @@ import { Container, Form, InputGroup, Button, Row, Col } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { AiOutlineFileAdd, AiOutlineEdit, AiOutlineSearch, AiOutlineDelete } from 'react-icons/ai';
+import { useState } from 'react';
 
 function App() {
+  const [documentType,setDocumentType] = useState('')
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
   };
+
+  const handleDocumentType = (e) => {
+    const value = e.target.value
+
+    if (value.length === 11) {
+      setDocumentType("CPF");
+      // console.log("CPF")
+    } else if (value.length === 14) {
+      setDocumentType("CNPJ");
+      // console.log("CNPJ")
+    } else {
+      setDocumentType('');
+    }
+  }
+  
+
 
   return (
     <Container fluid className="d-flex justify-content-center align-items-center vh-100">
@@ -48,20 +66,15 @@ function App() {
           <Row className="mb-3">
             <Col md={4}>
               <Form.Group controlId="nome">
-                <Form.Label>Nome do cliente/Razão Social</Form.Label>
+                <Form.Label>Nome do cliente / Razão Social</Form.Label>
                 <Form.Control className="w-100" required type="text" name='nome' placeholder="Nome" />
               </Form.Group>
             </Col>
             <Col>
-              <Form.Group controlId="cpf">
-                <Form.Label>CPF</Form.Label>
-                <Form.Control required type="text" name='CPF' placeholder="CPF" />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group controlId="cnpj">
-                <Form.Label>CNPJ</Form.Label>
-                <Form.Control required type="text" name='CNPJ' placeholder="CNPJ" />
+              <Form.Group controlId="document">
+                <Form.Label>CPF / CNPJ</Form.Label>
+                {/* DIGITE O CPF OU CNPJ SEM PONTUAÇÃO */}
+                <Form.Control required type="text" name={documentType} placeholder="CPF / CPNJ" onChange={handleDocumentType}/>
               </Form.Group>
             </Col>
             <Col>
