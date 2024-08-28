@@ -12,6 +12,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+  
 
   const handleDocumentType = (e) => {
     const value = e.target.value
