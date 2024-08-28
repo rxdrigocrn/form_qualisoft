@@ -1,19 +1,20 @@
-
 import './App.css'
 import { Container, Form, InputGroup, Button, Row, Col } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { AiOutlineFileAdd, AiOutlineEdit, AiOutlineSearch, AiOutlineDelete } from 'react-icons/ai';
 
-
-
 function App() {
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+  };
 
   return (
     <Container fluid className="d-flex justify-content-center align-items-center vh-100">
       <div className="border border-dark rounded p-5 form-container">
-        <Form>
-
+        <form action="" method="POST" onSubmit={handleSubmit}>
           <div className="form-header p-3 d-flex justify-content-between align-items-start border-3 border-bottom border-white mb-3">
             <div className="d-flex gap-4">
               <Button name='Btn_Incluir' className="d-flex flex-column align-items-center button-size">
@@ -36,7 +37,7 @@ function App() {
           </div>
           <h5>Código</h5>
           <Row className='mb-3'>
-          <Col md={2}>
+            <Col md={2}>
               <Form.Group controlId="codigo">
                 <Form.Label>Código</Form.Label>
                 <Form.Control type="number" name='codigo' placeholder="Código" required />
@@ -60,7 +61,7 @@ function App() {
             <Col>
               <Form.Group controlId="cnpj">
                 <Form.Label>CNPJ</Form.Label>
-                <Form.Control required type="text" name='CNPJ' placeholder="CPNJ" />
+                <Form.Control required type="text" name='CNPJ' placeholder="CNPJ" />
               </Form.Group>
             </Col>
             <Col>
@@ -70,9 +71,9 @@ function App() {
               </Form.Group>
             </Col>
             <Col>
-              <Form.Group controlId="RG">
+              <Form.Group controlId="rg">
                 <Form.Label>RG</Form.Label>
-                <Form.Control required type="number" name='rg' placeholder='RG'/>
+                <Form.Control required type="number" name='rg' placeholder='RG' />
               </Form.Group>
             </Col>
           </Row>
@@ -169,22 +170,18 @@ function App() {
             </Col>
           </Row>
 
-
           <Form.Group controlId="observacoes" className="mb-3">
             <Form.Label><h5>Observações</h5></Form.Label>
             <Form.Control as="textarea" rows={5} placeholder="Observações" />
           </Form.Group>
 
-
-
           <Form.Group controlId="salvar" className="pt-4 d-flex justify-content-center">
-            <Button type='submit' className='fs-5 px-5'> Salvar </Button>
+            <Button type='submit' className='fs-5 px-5'>Salvar</Button>
           </Form.Group>
-
-        </Form>
+        </form>
       </div>
     </Container>
   );
 }
 
-export default App
+export default App;
