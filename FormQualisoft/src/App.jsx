@@ -6,8 +6,8 @@ import { AiOutlineFileAdd, AiOutlineEdit, AiOutlineSearch, AiOutlineDelete } fro
 
 function App() {
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
   };
 
