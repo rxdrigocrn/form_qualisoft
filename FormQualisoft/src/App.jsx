@@ -31,11 +31,11 @@ function App() {
 
 
   return (
-    <Container fluid className="d-flex justify-content-center align-items-center min-vh-100 p-0">
+    <Container fluid className="d-flex justify-content-center align-items-center min-vh-100 container-fluid">
       <div className="border border-dark rounded-3 px-5 pb-4 form-container mx-auto" >
         <form action="" method="POST" onSubmit={handleSubmit}>
-          <div className="form-header p-3 d-flex justify-content-between align-items-start border-3 border-bottom border-white mb-3">
-            <div className="d-flex gap-3">
+          <div className="form-header p-3 d-flex flex-wrap justify-content-between align-items-start border-3 border-bottom border-white mb-3 m-xs-0 fs-md-6">
+            <div className="d-flex gap-3 ">
               <Button name='Btn_Incluir' className="d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark">
                 <AiOutlineFileAdd className='fs-1' />
                 Incluir
@@ -68,7 +68,7 @@ function App() {
             <Col md={4}>
               <Form.Group controlId="nome">
                 <Form.Label>Nome do cliente / Razão Social</Form.Label>
-                <Form.Control className="w-100" required type="text" name='nome' placeholder="Nome" />
+                <Form.Control className="w-100 mb-2" required type="text" name='nome' placeholder="Nome" />
               </Form.Group>
             </Col>
             <Col>
@@ -120,25 +120,25 @@ function App() {
             </Col>
           </Row>
           <Row className="mb-3">
-            <Col>
+            <Col lg={3} xs={6}>
               <Form.Group controlId="bairro">
                 <Form.Label>Bairro</Form.Label>
                 <Form.Control required type="text" name='bairro' placeholder="Bairro" />
               </Form.Group>
             </Col>
-            <Col>
+            <Col lg={3} xs={6}>
               <Form.Group controlId="cidade">
                 <Form.Label>Cidade</Form.Label>
                 <Form.Control required type="text" name='cidade' placeholder="Cidade" />
               </Form.Group>
             </Col>
-            <Col>
+            <Col lg={3} xs={6}>
               <Form.Group controlId="estado">
                 <Form.Label>Estado</Form.Label>
                 <Form.Control required type="text" name='estado' placeholder="Estado" />
               </Form.Group>
             </Col>
-            <Col>
+            <Col lg={3} xs={6}>
               <Form.Group controlId="pais">
                 <Form.Label>País</Form.Label>
                 <Form.Control required type="text" name='pais' placeholder="País" />
