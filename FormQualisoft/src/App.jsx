@@ -146,7 +146,7 @@ function App() {
           </Row>
 
           <h5>Contatos</h5>
-          <Row className="mb-3">
+          <Row className="mb-3 d-flex flex-wrap">
             <Col>
               <Form.Group controlId="whatsapp">
                 <Form.Label>WhatsApp</Form.Label>
@@ -158,13 +158,13 @@ function App() {
                 </InputGroup>
               </Form.Group>
             </Col>
-            <Col>
+            <Col className='mb-2' xs={6}>
               <Form.Group controlId="outroTelefone">
                 <Form.Label>Outro Telefone</Form.Label>
                 <Form.Control required type="text" name='outro_telefone' placeholder="Outro Telefone" />
               </Form.Group>
             </Col>
-            <Col>
+            <Col xs={6}>
               <Form.Group controlId="instagram">
                 <Form.Label>Instagram</Form.Label>
                 <InputGroup>
