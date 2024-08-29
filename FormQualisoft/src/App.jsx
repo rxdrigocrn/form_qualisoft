@@ -50,20 +50,13 @@ function App() {
                 <AiOutlineSearch className='fs-1' />
                 Procurar
               </Button>
-<<<<<<< HEAD
-            <Button name='Btn_Excluir' className="d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark btn-delete">
-=======
               <Button name='Btn_Excluir' className="d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark btn-delete">
->>>>>>> 12d0d48bc854c02e8cbcc79ba1a2ccf94ba3d7dd
               <AiOutlineDelete className='fs-1' />
               Excluir
             </Button>
             </div>
-<<<<<<< HEAD
-=======
-  
->>>>>>> 12d0d48bc854c02e8cbcc79ba1a2ccf94ba3d7dd
-          </div>
+
+            </div>
           <h5>Código</h5>
           <Row className='mb-3'>
             <Col md={2}>
