@@ -94,19 +94,19 @@ function App() {
 
           <h5>Endereço</h5>
           <Row className="mb-3">
-            <Col>
+            <Col className='mb-2'>
               <Form.Group controlId="cep">
                 <Form.Label>CEP</Form.Label>
                 <Form.Control required type="text" name='CEP' placeholder="CEP" />
               </Form.Group>
             </Col>
-            <Col>
+            <Col >
               <Form.Group controlId="endereco">
                 <Form.Label>Endereço</Form.Label>
                 <Form.Control required type="text" name='endereco' placeholder="Endereço" />
               </Form.Group>
             </Col>
-            <Col md={1}>
+            <Col className='mb-2' md={1}>
               <Form.Group controlId="numero">
                 <Form.Label>Número</Form.Label>
                 <Form.Control required type="text" name='numero_da_casa' placeholder="Nº" />
@@ -120,7 +120,7 @@ function App() {
             </Col>
           </Row>
           <Row className="mb-3">
-            <Col lg={3} xs={6}>
+            <Col className='mb-2' lg={3} xs={6}>
               <Form.Group controlId="bairro">
                 <Form.Label>Bairro</Form.Label>
                 <Form.Control required type="text" name='bairro' placeholder="Bairro" />
