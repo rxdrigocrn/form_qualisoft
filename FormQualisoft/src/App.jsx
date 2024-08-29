@@ -153,7 +153,7 @@ function App() {
               <Form.Group controlId="whatsapp">
                 <Form.Label>WhatsApp</Form.Label>
                 <InputGroup>
-                  <InputGroup.Text>
+                  <InputGroup.Text style={{background-color: "green"}} >
                     <FaWhatsapp />
                   </InputGroup.Text>
                   <Form.Control required type="text" name="whatsapp" placeholder="WhatsApp" />
