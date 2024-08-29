@@ -12,7 +12,6 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  
 
   const handleDocumentType = (e) => {
     const value = e.target.value
@@ -32,25 +31,25 @@ function App() {
 
   return (
     <Container fluid className="d-flex justify-content-center align-items-center vh-100">
-      <div className="border border-dark rounded p-5 form-container">
+      <div className="border border-dark rounded-3 px-5 pb-4 form-container">
         <form action="" method="POST" onSubmit={handleSubmit}>
           <div className="form-header p-3 d-flex justify-content-between align-items-start border-3 border-bottom border-white mb-3">
             <div className="d-flex gap-4">
-              <Button name='Btn_Incluir' className="d-flex flex-column align-items-center button-size">
-                <AiOutlineFileAdd className='fs-3' />
+              <Button name='Btn_Incluir' className="d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark">
+                <AiOutlineFileAdd className='fs-1' />
                 Incluir
               </Button>
-              <Button name='Btn_Alterar' className="d-flex flex-column align-items-center button-size">
-                <AiOutlineEdit className='fs-3' />
+              <Button name='Btn_Alterar' className="d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark">
+                <AiOutlineEdit className='fs-1' />
                 Alterar
               </Button>
-              <Button name='Btn_Procurar' className="d-flex flex-column align-items-center button-size">
-                <AiOutlineSearch className='fs-3' />
+              <Button name='Btn_Procurar' className="d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark">
+                <AiOutlineSearch className='fs-1' />
                 Procurar
               </Button>
             </div>
-            <Button name='Btn_Excluir' className="d-flex flex-column align-items-center button-size">
-              <AiOutlineDelete className='fs-3' />
+            <Button name='Btn_Excluir' className="d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark btn-delete">
+              <AiOutlineDelete className='fs-1' />
               Excluir
             </Button>
           </div>
@@ -106,7 +105,7 @@ function App() {
                 <Form.Control required type="text" name='endereco' placeholder="Endereço" />
               </Form.Group>
             </Col>
-            <Col>
+            <Col md={1}>
               <Form.Group controlId="numero">
                 <Form.Label>Número</Form.Label>
                 <Form.Control required type="text" name='numero_da_casa' placeholder="Nº" />

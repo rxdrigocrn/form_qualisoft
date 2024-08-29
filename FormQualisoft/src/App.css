@@ -10,4 +10,19 @@
   justify-content: center; 
   align-items: center;
   text-align: center; 
+  color: black;
+  opacity: 0.6;
+  transition: all 0.2s !important;
+}
+
+.button-size:hover{
+  opacity: 1;
+  transform: translateY(-3px);
+}
+.btn-delete{
+  transition: all 1s;
+}
+.btn-delete:hover{
+  color: red !important;
+  opacity: 1;
 }
