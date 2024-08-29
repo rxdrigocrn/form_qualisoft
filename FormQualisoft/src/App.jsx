@@ -1,10 +1,12 @@
 import './App.css'
 import { Container, Form, InputGroup, Button, Row, Col } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css"
-import { FaWhatsapp, FaInstagram, FaPhone, FaEnvelope  } from 'react-icons/fa';
+import { FaPhone, FaEnvelope  } from 'react-icons/fa';
 import { AiOutlineFileAdd, AiOutlineEdit, AiOutlineSearch, AiOutlineDelete } from 'react-icons/ai';
 import { useState } from 'react';
-import InputGroupText from 'react-bootstrap/esm/InputGroupText';
+
+import insta from "./assets/insta.png"
+import wpp from "./assets/wpp.png"
 
 function App() {
   const [documentType, setDocumentType] = useState('')
@@ -48,11 +50,11 @@ function App() {
                 <AiOutlineSearch className='fs-1' />
                 Procurar
               </Button>
-            </div>
             <Button name='Btn_Excluir' className="d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark btn-delete">
               <AiOutlineDelete className='fs-1' />
               Excluir
             </Button>
+            </div>
           </div>
           <h5>Código</h5>
           <Row className='mb-3'>
@@ -149,11 +151,11 @@ function App() {
           <h5>Contatos</h5>
           <Row className="mb-3 d-flex flex-wrap">
             <Col lg={3} xs={6}>
-              <Form.Group controlId="whatsapp">
+              <Form.Group controlId="whatsapp" >
                 <Form.Label>WhatsApp</Form.Label>
                 <InputGroup>
-                  <InputGroup.Text>
-                    <FaWhatsapp />
+                  <InputGroup.Text className='px-2'>
+                    <img className='wpp' src={wpp} alt="" />
                   </InputGroup.Text>
                   <Form.Control required type="text" name="whatsapp" placeholder="WhatsApp" />
                 </InputGroup>
@@ -174,8 +176,8 @@ function App() {
               <Form.Group controlId="instagram">
                 <Form.Label>Instagram</Form.Label>
                 <InputGroup>
-                  <InputGroup.Text>
-                    <FaInstagram />
+                  <InputGroup.Text className='p-0 m-0'>
+                    <img className='insta' src={insta} alt="" />
                   </InputGroup.Text>
                   <Form.Control type="text" name='instagram' placeholder="Instagram" />
                 </InputGroup>
