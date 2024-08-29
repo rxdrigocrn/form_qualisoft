@@ -1,12 +1,13 @@
 import './App.css'
 import { Container, Form, InputGroup, Button, Row, Col } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css"
-import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaPhone, FaEnvelope  } from 'react-icons/fa';
 import { AiOutlineFileAdd, AiOutlineEdit, AiOutlineSearch, AiOutlineDelete } from 'react-icons/ai';
 import { useState } from 'react';
+import InputGroupText from 'react-bootstrap/esm/InputGroupText';
 
 function App() {
-  const [documentType,setDocumentType] = useState('')
+  const [documentType, setDocumentType] = useState('')
 
 
   const handleSubmit = (e) => {
@@ -26,15 +27,15 @@ function App() {
       setDocumentType('');
     }
   }
-  
+
 
 
   return (
-    <Container fluid className="d-flex justify-content-center align-items-center vh-100">
-      <div className="border border-dark rounded-3 px-5 pb-4 form-container">
+    <Container fluid className="d-flex justify-content-center align-items-center min-vh-100 p-0">
+      <div className="border border-dark rounded-3 px-5 pb-4 form-container mx-auto" >
         <form action="" method="POST" onSubmit={handleSubmit}>
           <div className="form-header p-3 d-flex justify-content-between align-items-start border-3 border-bottom border-white mb-3">
-            <div className="d-flex gap-4">
+            <div className="d-flex gap-3">
               <Button name='Btn_Incluir' className="d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark">
                 <AiOutlineFileAdd className='fs-1' />
                 Incluir
@@ -74,7 +75,7 @@ function App() {
               <Form.Group controlId="document">
                 <Form.Label>CPF / CNPJ</Form.Label>
                 {/* DIGITE O CPF OU CNPJ SEM PONTUAÇÃO */}
-                <Form.Control required type="text" name={documentType} placeholder="CPF / CPNJ" onChange={handleDocumentType}/>
+                <Form.Control required type="text" name={documentType} placeholder="CPF / CPNJ" onChange={handleDocumentType} />
               </Form.Group>
             </Col>
             <Col>
@@ -147,7 +148,7 @@ function App() {
 
           <h5>Contatos</h5>
           <Row className="mb-3 d-flex flex-wrap">
-            <Col>
+            <Col lg={3} xs={6}>
               <Form.Group controlId="whatsapp">
                 <Form.Label>WhatsApp</Form.Label>
                 <InputGroup>
@@ -158,13 +159,18 @@ function App() {
                 </InputGroup>
               </Form.Group>
             </Col>
-            <Col className='mb-2' xs={6}>
+            <Col className='mb-2' lg={3} xs={6}>
               <Form.Group controlId="outroTelefone">
                 <Form.Label>Outro Telefone</Form.Label>
-                <Form.Control required type="text" name='outro_telefone' placeholder="Outro Telefone" />
+                <InputGroup>
+                  <InputGroup.Text>
+                    <FaPhone />
+                  </InputGroup.Text>
+                  <Form.Control required type="text" name='outro_telefone' placeholder="Outro Telefone" />
+                </InputGroup>
               </Form.Group>
             </Col>
-            <Col xs={6}>
+            <Col lg={3} xs={6}>
               <Form.Group controlId="instagram">
                 <Form.Label>Instagram</Form.Label>
                 <InputGroup>
@@ -175,10 +181,15 @@ function App() {
                 </InputGroup>
               </Form.Group>
             </Col>
-            <Col>
+            <Col lg={3} xs={6}>
               <Form.Group controlId="email">
                 <Form.Label>E-mail</Form.Label>
-                <Form.Control required type="text" name='email' placeholder="E-mail" />
+                <InputGroup>
+                  <InputGroup.Text>
+                    <FaEnvelope />
+                  </InputGroup.Text>
+                  <Form.Control required type="text" name='email' placeholder="E-mail" />
+                </InputGroup>
               </Form.Group>
             </Col>
           </Row>
