@@ -1,7 +1,7 @@
 import './App.css'
 import { Container, Form, InputGroup, Button, Row, Col } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css"
-import { FaPhone, FaEnvelope  } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaSave } from 'react-icons/fa';
 import { AiOutlineFileAdd, AiOutlineEdit, AiOutlineSearch, AiOutlineDelete } from 'react-icons/ai';
 import { useState } from 'react';
 
@@ -46,23 +46,20 @@ function App() {
                 <AiOutlineEdit className='fs-1' />
                 Alterar
               </Button>
+              <Button name='Btn_Excluir' className="d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark btn-delete">
+                <AiOutlineDelete className='fs-1' />
+                Excluir
+              </Button>
+                <Button type='submit' className='d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark ms-5'>
+                  <FaSave className='fs-1'/>
+                  Salvar
+                </Button>
+                <div className="border-end border-dark-subtle "></div>
               <Button name='Btn_Procurar' className="d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark">
                 <AiOutlineSearch className='fs-1' />
                 Procurar
               </Button>
-<<<<<<< HEAD
-            <Button name='Btn_Excluir' className="d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark btn-delete">
-=======
-              <Button name='Btn_Excluir' className="d-flex flex-column align-items-center bg-transparent border-0 button-size text-dark btn-delete">
->>>>>>> 12d0d48bc854c02e8cbcc79ba1a2ccf94ba3d7dd
-              <AiOutlineDelete className='fs-1' />
-              Excluir
-            </Button>
             </div>
-<<<<<<< HEAD
-=======
-  
->>>>>>> 12d0d48bc854c02e8cbcc79ba1a2ccf94ba3d7dd
           </div>
           <h5>Código</h5>
           <Row className='mb-3'>
@@ -209,9 +206,6 @@ function App() {
             <Form.Control as="textarea" rows={5} placeholder="Observações" />
           </Form.Group>
 
-          <Form.Group controlId="salvar" className="pt-4 d-flex justify-content-center">
-            <Button type='submit' className='fs-5 px-5'>Salvar</Button>
-          </Form.Group>
         </form>
       </div>
     </Container>
